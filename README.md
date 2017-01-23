@@ -95,6 +95,9 @@ dunglas_angular_csrf:
     # Patterns of URLs to check for a valid CSRF token
     secure:
         - { path: "^/url-pattern", route: "^route_name_pattern$", host: "example.com", methods: [GET, POST] }
+    # Patterns to exclude from secure routes
+    exclude:
+        - { path: "^/url-pattern/secured", route: "^route_name_pattern$", host: "example.com", methods: [GET, POST] }
 ```
 
 ## Integration with Symfony2 form component
